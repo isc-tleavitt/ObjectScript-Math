@@ -6,7 +6,7 @@ services:
   - docker
 
 env:
-  - container_image="intersystemsdc/iris-community:2019.4.0.383.0-zpm"
+  - container_image="intersystemsdc/iris-community:latest"
     instance="iris"
     package="objectscript-math"
     build_flags="-verbose"
