@@ -4,12 +4,12 @@
     <Module>
       <Name>objectscript-math</Name>
       <Version>0.0.5</Version>
-	<Description>Math library for InterSystems ObjectScript</Description>
+	    <Description>Math library for InterSystems ObjectScript</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="Math.PKG"/>
       <Resource Name="Math.inc"/>
-      <UnitTest Name="tests" Package="UnitTest.Math" Phase="test"/>
+      <UnitTest Name="/tests" Package="UnitTest.Math" Phase="test"/>
     </Module>
   </Document>
 </Export>
