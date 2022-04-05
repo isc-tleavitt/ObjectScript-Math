@@ -49,7 +49,7 @@ If you would just like to use this library, please follow these steps:
 Set path="COPIED PATH FROM STEP 2"
 Do $system.OBJ.Load(path,"ck")
 ```
-This will load pkg.yourcompany.math.Math.cls, pkg.yourcompany.math.Utils.cls, and Math.inc
+This will load pkg.yourcompany.math.Math.cls, pkg.yourcompany.math.Utils.cls, and pkg.yourcompany.math.inc
 
 # Contributing
 Please see [the Contributing Guide](https://github.com/psteiwer/ObjectScript-Math/blob/master/CONTRIBUTING.md)
