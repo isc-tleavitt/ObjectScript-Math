@@ -5,10 +5,11 @@ Class pkg.yourcompany.math.test.math.TestCombinations Extends %UnitTest.TestCase
 
 Method TestSimpleCases()
 {
+    // $$$Combinations(4,0) = 1
     // $$$Combinations(4,1) = 4
     // $$$Combinations(4,2) = 6
-    // $$$Combinations(4,3) = 6
-    // $$$Combinations(4,4) = 6
+    // $$$Combinations(4,3) = 4
+    // $$$Combinations(4,4) = 1
 }
 
 Method TestEdgeCases()
