@@ -167,10 +167,10 @@ ClassMethod Floor(pValue = "") As %Integer
 /// Evaluates to n! / (k! * (n - k)!) when k <= n and evaluates to zero when k > n.
 /// Also called the binomial coefficient because it is equivalent to the coefficient of k-th term in polynomial expansion of the expression (1 + x) ** n.
 /// Returns an error if either of the arguments are not integers, or if either of the arguments are negative.
-ClassMethod Combinations(n, k)
+ClassMethod Combinations(n As %Integer, k As %Integer) As %Integer
 {
 	Set num = ..Factorial(n)
-	Set denom = ..Factorial(k) * ..Factorial(n - k)
+	Set denom = ..Factorial(k) * ..Factorial(x - k)
 	Quit num/denom
 }
 
