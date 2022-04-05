@@ -41,10 +41,10 @@
 
 ## Running Unit Tests
 ### With ZPM
-Running Unit Tests with ZPM is extremely simple. Once in the ZPM prompt, you can run "objectscript-math test. This will run the Unit Tests and provide a link to the results. Before following the link to the results, you can quickly check the output for success if "ALL PASSED"
+Running Unit Tests with ZPM is extremely simple. Once in the ZPM prompt, you can run "pkg.yourcompany.math test. This will run the Unit Tests and provide a link to the results. Before following the link to the results, you can quickly check the output for success if "ALL PASSED"
 ```
 SAMPLES>zpm
-zpm: SAMPLES>objectscript-math test
+zpm: SAMPLES>pkg.yourcompany.math test
 ```
 
 ### Without ZPM

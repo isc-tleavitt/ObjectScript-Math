@@ -15,3 +15,6 @@ ROUTINE pkg.yourcompany.math [Type=INC]
 #define Ceiling ##class(pkg.yourcompany.math.Math).Ceiling
 
 #define Floor ##class(pkg.yourcompany.math.Math).Floor
+
+#define Comb ##class(pkg.yourcompany.math.Math).Combinations
+#define Combinations ##class(pkg.yourcompany.math.Math).Combinations
