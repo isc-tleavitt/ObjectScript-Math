@@ -1,18 +1,18 @@
-Include Math
+Include pkg.yourcompany.math
 
-Class UnitTest.Math.Math.TestFactorial Extends %UnitTest.TestCase
+Class pkg.yourcompany.math.test.math.TestFactorial Extends %UnitTest.TestCase
 {
 
 Method TestSmall()
 {
-	Set tResults=##class(Math.Math).Factorial(6)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(6)
 	Set tExpected=720
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestMax()
 {
-	Set tResults=##class(Math.Math).Factorial(23)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(23)
 	Set tExpected=25852016738884976640000
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -20,7 +20,7 @@ Method TestMax()
 Method TestTooLarge()
 {
 	Try {
-		Set tResults=##class(Math.Math).Factorial(35)
+		Set tResults=##class(pkg.yourcompany.math.Math).Factorial(35)
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -31,7 +31,7 @@ Method TestTooLarge()
 Method TestTooSmall()
 {
 	Try {
-		Set tResults=##class(Math.Math).Factorial(-35)
+		Set tResults=##class(pkg.yourcompany.math.Math).Factorial(-35)
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -41,28 +41,28 @@ Method TestTooSmall()
 
 Method TestOne()
 {
-	Set tResults=##class(Math.Math).Factorial(1)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(1)
 	Set tExpected=1
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestZero()
 {
-	Set tResults=##class(Math.Math).Factorial(0)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(0)
 	Set tExpected=0
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestNegativeEven()
 {
-	Set tResults=##class(Math.Math).Factorial(-16)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(-16)
 	Set tExpected=-20922789888000
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestNegativeOdd()
 {
-	Set tResults=##class(Math.Math).Factorial(-15)
+	Set tResults=##class(pkg.yourcompany.math.Math).Factorial(-15)
 	Set tExpected=-1307674368000
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -70,7 +70,7 @@ Method TestNegativeOdd()
 Method TestEmpty()
 {
 	Try {
-		Set tResults=##class(Math.Math).Factorial()
+		Set tResults=##class(pkg.yourcompany.math.Math).Factorial()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}

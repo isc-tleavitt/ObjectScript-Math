@@ -1,39 +1,39 @@
-Include Math
+Include pkg.yourcompany.math
 
-Class UnitTest.Math.Math.TestMin Extends %UnitTest.TestCase
+Class pkg.yourcompany.math.test.math.TestMin Extends %UnitTest.TestCase
 {
 
 Method TestOneNumber()
 {
-	Set tResults=##class(Math.Math).Min(58372)
+	Set tResults=##class(pkg.yourcompany.math.Math).Min(58372)
 	Set tExpected=58372
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestTwoNumbers()
 {
-	Set tResults=##class(Math.Math).Min(1847,9428)
+	Set tResults=##class(pkg.yourcompany.math.Math).Min(1847,9428)
 	Set tExpected=1847
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestThreeNumbers()
 {
-	Set tResults=##class(Math.Math).Min(4748,10394,8374)
+	Set tResults=##class(pkg.yourcompany.math.Math).Min(4748,10394,8374)
 	Set tExpected=4748
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestOneNegative()
 {
-	Set tResults=##class(Math.Math).Min(4748,10394,-8374)
+	Set tResults=##class(pkg.yourcompany.math.Math).Min(4748,10394,-8374)
 	Set tExpected=-8374
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestAllNegative()
 {
-	Set tResults=##class(Math.Math).Min(-4748,-10394,-8374)
+	Set tResults=##class(pkg.yourcompany.math.Math).Min(-4748,-10394,-8374)
 	Set tExpected=-10394
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -41,7 +41,7 @@ Method TestAllNegative()
 Method TestEmpty()
 {
 	Try {
-		Set tResults=##class(Math.Math).Min()
+		Set tResults=##class(pkg.yourcompany.math.Math).Min()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}

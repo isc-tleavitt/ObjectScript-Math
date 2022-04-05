@@ -1,32 +1,32 @@
-Include Math
+Include pkg.yourcompany.math
 
-Class UnitTest.Math.Math.TestCeiling Extends %UnitTest.TestCase
+Class pkg.yourcompany.math.test.math.TestCeiling Extends %UnitTest.TestCase
 {
 
 Method TestNegative()
 {
-	Set tResults=##class(Math.Math).Ceiling(-183.43)
+	Set tResults=##class(pkg.yourcompany.math.Math).Ceiling(-183.43)
 	Set tExpected=-183
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestPositive()
 {
-	Set tResults=##class(Math.Math).Ceiling(8394.6331)
+	Set tResults=##class(pkg.yourcompany.math.Math).Ceiling(8394.6331)
 	Set tExpected=8395
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestOverHalf()
 {
-	Set tResults=##class(Math.Math).Ceiling(16.89)
+	Set tResults=##class(pkg.yourcompany.math.Math).Ceiling(16.89)
 	Set tExpected=17
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestUnderHalf()
 {
-	Set tResults=##class(Math.Math).Ceiling(16.29)
+	Set tResults=##class(pkg.yourcompany.math.Math).Ceiling(16.29)
 	Set tExpected=17
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -41,7 +41,7 @@ Method TestMacro()
 Method TestEmpty()
 {
 	Try {
-		Set tResults=##class(Math.Math).Ceiling()
+		Set tResults=##class(pkg.yourcompany.math.Math).Ceiling()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}

@@ -1,32 +1,32 @@
-Include Math
+Include pkg.yourcompany.math
 
-Class UnitTest.Math.Math.TestGreatestCommonDivisor Extends %UnitTest.TestCase
+Class pkg.yourcompany.math.test.math.TestGreatestCommonDivisor Extends %UnitTest.TestCase
 {
 
 Method TestTwoNumbers()
 {
-	Set tResults=##class(Math.Math).GreatestCommonDivisor(252,105)
+	Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(252,105)
 	Set tExpected=21
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestThreeNumbers()
 {
-	Set tResults=##class(Math.Math).GreatestCommonDivisor(8,40,100)
+	Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(8,40,100)
 	Set tExpected=4
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestTwoNumbersWithOne()
 {
-	Set tResults=##class(Math.Math).GreatestCommonDivisor(1,15)
+	Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(1,15)
 	Set tExpected=1
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestThreeNumbersWithOne()
 {
-	Set tResults=##class(Math.Math).GreatestCommonDivisor(1,8,15)
+	Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(1,8,15)
 	Set tExpected=1
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -34,7 +34,7 @@ Method TestThreeNumbersWithOne()
 Method TestZero()
 {
 	Try {
-		Set tResults=##class(Math.Math).GreatestCommonDivisor(0,8)
+		Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(0,8)
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -45,7 +45,7 @@ Method TestZero()
 Method TestEmpty()
 {
 	Try {
-		Set tResults=##class(Math.Math).GreatestCommonDivisor()
+		Set tResults=##class(pkg.yourcompany.math.Math).GreatestCommonDivisor()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -55,7 +55,7 @@ Method TestEmpty()
 
 Method TestShortMethod()
 {
-	Set tResults=##class(Math.Math).GCD(8,40,100)
+	Set tResults=##class(pkg.yourcompany.math.Math).GCD(8,40,100)
 	Set tExpected=4
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }

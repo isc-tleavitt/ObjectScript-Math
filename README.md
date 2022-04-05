@@ -5,7 +5,7 @@ Math library for InterSystems ObjectScript. This library contains functions that
 
 Once this library is installed, functions can be called two ways:
 ```
-Set value=##class(Math.Math).LeastCommonMultiple(134,382)
+Set value=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(134,382)
 ```
 or
 ```
@@ -27,21 +27,13 @@ Once Installed, enter the "zpm" command to enter the zpm shell:
 SAMPLES>zpm
 zpm: SAMPLES>
 ```
-Once inside zpm, run "install objectscript-math" to install the package:
+Once inside zpm, run "install pkg.yourcompany.math" to install the package:
 ```
-zpm: SAMPLES>install objectscript-math
+zpm: SAMPLES>install pkg.yourcompany.math
  
-[objectscript-math]     Reload START
-[objectscript-math]     Reload SUCCESS
-[objectscript-math]     Module object refreshed.
-[objectscript-math]     Validate START
-[objectscript-math]     Validate SUCCESS
-[objectscript-math]     Compile START
-[objectscript-math]     Compile SUCCESS
-[objectscript-math]     Activate START
-[objectscript-math]     Configure START
-[objectscript-math]     Configure SUCCESS
-[objectscript-math]     Activate SUCCESS
+[pkg.yourcompany.math]     Reload START
+...
+[pkg.yourcompany.math]     Activate SUCCESS
 ```
 
 ## Without ZPM
@@ -57,7 +49,7 @@ If you would just like to use this library, please follow these steps:
 Set path="COPIED PATH FROM STEP 2"
 Do $system.OBJ.Load(path,"ck")
 ```
-This will load Math.Math.cls, Math.Utils.cls, and Math.inc
+This will load pkg.yourcompany.math.Math.cls, pkg.yourcompany.math.Utils.cls, and pkg.yourcompany.math.inc
 
 # Contributing
 Please see [the Contributing Guide](https://github.com/psteiwer/ObjectScript-Math/blob/master/CONTRIBUTING.md)

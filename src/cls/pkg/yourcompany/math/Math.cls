@@ -1,11 +1,11 @@
-Class Math.Math
+Class pkg.yourcompany.math.Math
 {
 
 /// Accepts a variable number of parameters and outputs the Least Common Multiple of them</br>
 /// Null input and 0 are not valid
 ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tRes=1
@@ -42,14 +42,14 @@ ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 /// See <method>LeastCommonMultiple</method>
 ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 {
-##class(Math.Math).LeastCommonMultiple(pFactors...)
+##class(pkg.yourcompany.math.Math).LeastCommonMultiple(pFactors...)
 }
 
 /// Accepts a variable number of parameters and outputs the max value</br>
 /// Null input is not valid
 ClassMethod Max(pIntegers...) As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tMax=""
@@ -66,7 +66,7 @@ ClassMethod Max(pIntegers...) As %Integer
 /// Null input is not valid
 ClassMethod Min(pIntegers...) As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Set tMin=""
@@ -85,10 +85,10 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 {
 	Set tRes=""
 	
-	Set tSC=##class(Math.Utils).ValidateInput(pIntegers...)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
-	Set tMin=##class(Math.Math).Min(pIntegers...)
+	Set tMin=##class(pkg.yourcompany.math.Math).Min(pIntegers...)
 
 	If tMin=0 {
 		$$$ThrowStatus($$$ERROR(5001,"Cannot compute GreatestCommonDivisor of 0"))
@@ -112,17 +112,17 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 /// See <method>GreatestCommonDivisor</method>
 ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 {
-##class(Math.Math).GreatestCommonDivisor(pFactors...)
+##class(pkg.yourcompany.math.Math).GreatestCommonDivisor(pFactors...)
 }
 
 /// Accepts a single value and returns the factorial of that value</br>
 /// Only accepts range of -23 to +23
 ClassMethod Factorial(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pValue)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
-	Set tSC=##class(Math.Utils).ValidateRange(pValue,-23,23)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateRange(pValue,-23,23)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 
 	// This is not a boolean, but a multiplier for if the number is negative
@@ -146,7 +146,7 @@ ClassMethod Factorial(pValue = "") As %Integer
 /// Null input is not valid
 ClassMethod Ceiling(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pValue)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Quit $SYSTEM.SQL.CEILING(pValue)
@@ -157,7 +157,7 @@ ClassMethod Ceiling(pValue = "") As %Integer
 /// Null input is not valid
 ClassMethod Floor(pValue = "") As %Integer
 {
-	Set tSC=##class(Math.Utils).ValidateInput(pValue)
+	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
 	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
 	
 	Quit $SYSTEM.SQL.FLOOR(pValue)
