@@ -1,4 +1,4 @@
-Class Math.Utils
+Class pkg.yourcompany.math.Utils
 {
 
 /// This method will validate the input to confirm there are values to process</br>
@@ -24,7 +24,7 @@ ClassMethod ValidateRange(pValue As %Integer = "", pMin As %Integer = "", pMax A
 	Set tSC=$$$OK
 
     For tTest=pValue,pMin,pMax {
-        Set tSC=##class(Math.Utils).ValidateInput(tTest)
+        Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(tTest)
         If $$$ISERR(tSC) Return tSC
     }
     

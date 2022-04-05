@@ -1,32 +1,32 @@
-Include Math
+Include pkg.yourcompany.math
 
-Class UnitTest.Math.Math.TestLeastCommonMultiple Extends %UnitTest.TestCase
+Class pkg.yourcompany.math.test.math.TestLeastCommonMultiple Extends %UnitTest.TestCase
 {
 
 Method TestTwoNumbers()
 {
-	Set tResults=##class(Math.Math).LeastCommonMultiple(3,8)
+	Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(3,8)
 	Set tExpected=24
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestThreeNumbers()
 {
-	Set tResults=##class(Math.Math).LeastCommonMultiple(7,3,8)
+	Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(7,3,8)
 	Set tExpected=168
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestTwoNumbersWithOne()
 {
-	Set tResults=##class(Math.Math).LeastCommonMultiple(1,15)
+	Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(1,15)
 	Set tExpected=15
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
 
 Method TestThreeNumbersWithOne()
 {
-	Set tResults=##class(Math.Math).LeastCommonMultiple(1,8,15)
+	Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(1,8,15)
 	Set tExpected=120
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -34,7 +34,7 @@ Method TestThreeNumbersWithOne()
 Method TestZero()
 {
 	Try {
-		Set tResults=##class(Math.Math).LeastCommonMultiple(0,8)
+		Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(0,8)
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -44,7 +44,7 @@ Method TestZero()
 
 Method TestLarge()
 {
-	Set tResults=##class(Math.Math).LeastCommonMultiple(58372,94382,38942)
+	Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple(58372,94382,38942)
 	Set tExpected=53635460155492
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }
@@ -52,7 +52,7 @@ Method TestLarge()
 Method TestEmpty()
 {
 	Try {
-		Set tResults=##class(Math.Math).LeastCommonMultiple()
+		Set tResults=##class(pkg.yourcompany.math.Math).LeastCommonMultiple()
 	} Catch ex {
 		Set tResults=$SYSTEM.Status.GetErrorText(ex.AsStatus())
 	}
@@ -62,7 +62,7 @@ Method TestEmpty()
 
 Method TestShortMethod()
 {
-	Set tResults=##class(Math.Math).LCM(7,3,8)
+	Set tResults=##class(pkg.yourcompany.math.Math).LCM(7,3,8)
 	Set tExpected=168
 	Do $$$AssertEquals(tResults,tExpected,tExpected_" = "_tResults)
 }

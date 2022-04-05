@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="objectscript-math.ZPM">
+  <Document name="pkg.yourcompany.math.ZPM">
     <Module>
-      <Name>objectscript-math</Name>
-      <Version>0.0.5</Version>
+      <Name>pkg.yourcompany.math</Name>
+      <Version>0.1.0</Version>
 	    <Description>Math library for InterSystems ObjectScript</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="Math.PKG"/>
-      <Resource Name="Math.inc"/>
-      <UnitTest Name="/tests" Package="UnitTest.Math" Phase="test"/>
+      <Resource Name="pkg.yourcompany.math.PKG"/>
+      <Resource Name="pkg.yourcompany.math.inc"/>
+      <UnitTest Name="/tests" Package="pkg.yourcompany.math.test" Phase="test"/>
     </Module>
   </Document>
 </Export>
