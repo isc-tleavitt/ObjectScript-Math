@@ -1,9 +1,8 @@
 {
     "objectscript.conn" :{
       "ns": "DEV",
-      "active": false,
-      "server": "default~iris",
-      "username": "_SYSTEM"
+      "active": true,
+      "server": "default~iris"
     }
 
 }
