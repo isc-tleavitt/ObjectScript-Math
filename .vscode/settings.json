@@ -1,8 +1,8 @@
 {
     "objectscript.conn" :{
-      "ns": "DEV",
-      "active": true,
-      "server": "default~iris"
+      "ns": "USER",
+      "active": false,
+      "server": "el2022"
     }
 
 }
