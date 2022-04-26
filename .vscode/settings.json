@@ -1,8 +1,7 @@
 {
-    "objectscript.conn" :{
-      "ns": "USER",
-      "active": false,
-      "server": "el2022"
-    }
-
+  "objectscript.conn": {
+    "ns": "USER",
+    "active": false,
+    "server": "el2022"
+  }
 }
