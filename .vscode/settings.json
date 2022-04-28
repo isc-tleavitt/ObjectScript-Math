@@ -1,7 +1,7 @@
 {
-  "objectscript.conn": {
-    "ns": "USER",
+  "objectscript.conn" :{
+    "ns": "DEV",
     "active": true,
-    "server": "el2022"
+    "server": "default~iris"
   }
-}
+} 
