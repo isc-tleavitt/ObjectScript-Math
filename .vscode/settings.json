@@ -1,7 +1,7 @@
 {
   "objectscript.conn": {
     "ns": "USER",
-    "active": false,
+    "active": true,
     "server": "el2022"
   }
 }
