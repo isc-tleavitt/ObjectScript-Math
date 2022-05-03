@@ -6,14 +6,14 @@ Class pkg.yourcompany.math.Math
 ClassMethod LeastCommonMultiple(pIntegers... As %Integer) As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 	
 	Set tRes=1
 	Set tMax=0
 	
 	For tCounter=1:1:pIntegers {
 		If pIntegers(tCounter)=0 {
-			$$$ThrowStatus($$$ERROR(5001,"Cannot compute LeastCommonMultiple of 0"))
+			$$$ThrowStatus($$$ERROR($$$GeneralError,"Cannot compute LeastCommonMultiple of 0"))
 		} ElseIf pIntegers(tCounter)>tMax {
 			Set tMax=pIntegers(tCounter)
 		}
@@ -50,7 +50,7 @@ ClassMethod LCM(pFactors...) As %Integer [ CodeMode = expression ]
 ClassMethod Max(pIntegers...) As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 	
 	Set tMax=""
 	Set tPosition=$o(pIntegers(""),1,tValue)
@@ -67,7 +67,7 @@ ClassMethod Max(pIntegers...) As %Integer
 ClassMethod Min(pIntegers...) As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 	
 	Set tMin=""
 	Set tPosition=$o(pIntegers(""),1,tValue)
@@ -86,7 +86,7 @@ ClassMethod GreatestCommonDivisor(pIntegers...) As %Integer
 	Set tRes=""
 	
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pIntegers...)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 
 	Set tMin=##class(pkg.yourcompany.math.Math).Min(pIntegers...)
 
@@ -120,10 +120,10 @@ ClassMethod GCD(pFactors...) As %Integer [ CodeMode = expression ]
 ClassMethod Factorial(pValue = "") As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateRange(pValue,-23,23)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 
 	// This is not a boolean, but a multiplier for if the number is negative
 	Set tNegative=1
@@ -147,9 +147,9 @@ ClassMethod Factorial(pValue = "") As %Integer
 ClassMethod Ceiling(pValue = "") As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 	
-	Quit $SYSTEM.SQL.CEILING(pValue)
+	Quit $SYSTEM.SQL.Functions.CEILING(pValue)
 }
 
 /// Wrapper for $SYSTEM.SQL.FLOOR</br>
@@ -158,9 +158,9 @@ ClassMethod Ceiling(pValue = "") As %Integer
 ClassMethod Floor(pValue = "") As %Integer
 {
 	Set tSC=##class(pkg.yourcompany.math.Utils).ValidateInput(pValue)
-	If $$$ISERR(tSC) $$$ThrowStatus(tSC)
+	$$$ThrowOnError(tSC)
 	
-	Quit $SYSTEM.SQL.FLOOR(pValue)
+	Quit $SYSTEM.SQL.Functions.FLOOR(pValue)
 }
 
 /// Return the number of ways to choose k items from n items without repetition and without order.

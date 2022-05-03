@@ -1,8 +1,7 @@
 {
-    "objectscript.conn" :{
-      "ns": "DEV",
-      "active": true,
-      "server": "default~iris"
-    }
-
-}
+  "objectscript.conn" :{
+    "ns": "DEV",
+    "active": true,
+    "server": "default~iris"
+  }
+} 
